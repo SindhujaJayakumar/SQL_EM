@@ -57,24 +57,16 @@ CREATE TABLE titles (
 );
 
 SELECT * FROM employees;
--300024
 
 SELECT * FROM departments;
---9
 
 SELECT * FROM salaries ;
--300024
 
 SELECT * FROM titles;
---443308
 
 SELECT * FROM dept_manager;
---24
 
 SELECT * FROM dept_emp ;
---331603
-
-
 
 --DROP TABLE employees;
 
@@ -109,7 +101,7 @@ INNER JOIN salaries s ON e.emp_no = s.emp_no ;
 SELECT *
 FROM employees;
 
---36232
+
 SELECT emp_no, last_name, first_name ,hire_date 
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1987-01-01'
@@ -125,8 +117,7 @@ SELECT * FROM departments;
 SELECT * FROM employees;
 
 SELECT * FROM dept_manager;
-
---24 
+ 
 SELECT
    departments.dept_no,
    departments.dept_name,
@@ -153,7 +144,6 @@ SELECT * FROM dept_emp;
 SELECT * FROM departments;
 
 
---331603
 SELECT
    employees.emp_no,
    employees.last_name,
@@ -167,14 +157,9 @@ JOIN departments ON dept_emp.dept_no = departments.dept_no;
 
 
 --5. List all employees whose first name is "Hercules" and last names begin with "B."
-
-
 SELECT *
 FROM employees 
 WHERE first_name = 'Hercules'  AND last_name LIKE 'B%'
-
-
-
 
 --6. List all employees in the Sales department, 
 --including their employee number, last name, first name  >> employees
@@ -185,8 +170,6 @@ SELECT * FROM employees;
 
 SELECT * FROM dept_emp;
 
-
---52245
 SELECT
    employees.emp_no,
    employees.last_name,
@@ -197,9 +180,6 @@ FROM employees
 JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 JOIN departments ON dept_emp.dept_no = departments.dept_no
 WHERE departments.dept_name = 'Sales';
-
-
-
 
 --7. List all employees in the 
 -- Sales and Development departments  >> departments (d005 & d007)
@@ -223,12 +203,8 @@ JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 JOIN departments ON dept_emp.dept_no = departments.dept_no
 WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development';
 
-
-
-
 --8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
---1638
 SELECT last_name, COUNT(last_name) as Clast 
 FROM employees
 GROUP BY last_name
