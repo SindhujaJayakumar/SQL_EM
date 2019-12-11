@@ -28,7 +28,7 @@ Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool li
 
 * Import each CSV file into the corresponding SQL table.
 
-#### Data Analysis
+#### Data Analysis 
 
 Once you have a complete database, do the following:
 
