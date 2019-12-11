@@ -32,6 +32,7 @@ Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool li
 
 Once you have a complete database, do the following:
 
+
 1. List the following details of each employee: employee number, last name, first name, gender, and salary.
 
 2. List employees who were hired in 1986.
